@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lzro.feedmatic.PetList.contentModel.PetModel;
+import com.lzro.feedmatic.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ddevice_list_item, parent, false);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.pet_list_item, parent, false);
             return new ViewHolder(view);
         }
 
@@ -92,18 +93,14 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
             RelativeLayout petItemLayout;
             TextView tvPetModel_Name;
             TextView tvPetModel_Online;
-            TextView tvPetModel_NextFeed;
             TextView tvPetModel_LastFeed;
-            ImageView imgDDeviceModel_Type;
 
             public ViewHolder(View itemView) {
                 super(itemView);
-                petItemLayout = (RelativeLayout) itemView.findViewById(R.id.ddeviceItemLayout);
-                tvPetModel_Name = (TextView) itemView.findViewById(R.id.tvDDeviceModel_Name);
-                tvPetModel_Online = (TextView) itemView.findViewById(R.id.tvDDeviceModel_Online);
-                tvPetModel_NextFeed = (TextView) itemView.findViewById(R.id.tvDDeviceModel_Value);
-                tvPetModel_LastFeed = (TextView) itemView.findViewById(R.id.tvDDeviceModel_Value);
-                imgDDeviceModel_Type = (ImageView) itemView.findViewById(R.id.imgDDeviceModel_Type);
+                petItemLayout = (RelativeLayout) itemView.findViewById(R.id.petItemLayout);
+                tvPetModel_Name = (TextView) itemView.findViewById(R.id.tvPetModel_Name);
+                tvPetModel_Online = (TextView) itemView.findViewById(R.id.tvPetModel_Online);
+                tvPetModel_LastFeed = (TextView) itemView.findViewById(R.id.tvPetLastFeed);
             }
 
             public void setOnItemClickListener(final PetModel element, final OnPetItemClickListener onPetItemClickListener) {
@@ -130,4 +127,4 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
             }
         }
     }
-}
+

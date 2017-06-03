@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:id="@+id/petItemLayout"
+    android:background="@drawable/round_corner_item">
+    <!-- android:background="#315c5c5c" -->
+    <!-- Cat footprint filled icon credits: https://icons8.com/icon/9199/Cat-Footprint-Filled -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="PetName"
+        android:id="@+id/tvPetModel_Name"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Desconectado"
+        android:id="@+id/tvPetModel_Online"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tvPetLastFeed"
+        android:text="últ. vez 10:12 am"
+        android:layout_alignTop="@+id/tvPetModel_Name"
+        android:layout_alignBottom="@+id/tvPetModel_Online"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgDDeviceModel_Type"
+        android:layout_alignTop="@+id/tvPetModel_Name"
+        android:layout_alignBottom="@+id/tvPetModel_Online"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/pet_footprint"
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>
