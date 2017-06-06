@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Feedmatic</string>
+    <string name="login_forgot_password"><u>Olvidé la contraseña</u></string>
+    <string name="login_no_account"><u>No tengo una cuenta todavía</u></string>
 </resources>

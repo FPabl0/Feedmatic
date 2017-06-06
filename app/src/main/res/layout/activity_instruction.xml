@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.lzro.feedmatic.InstructionActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_margin="0dp"
+        android:background="@color/colorPrimary"
+        android:layout_centerHorizontal="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#315c5c5c"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <include
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                layout="@layout/toolbar_default" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textInst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:typeface="sans"
+        android:textSize="20dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btInstNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textInst"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textInst"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:text="Siguiente" />
+
+    <Button
+        android:id="@+id/btInstBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textInst"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textInst"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:text="Atrás"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imgInst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textInst"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:background="@drawable/pet_footprint"/>
+
+</RelativeLayout>

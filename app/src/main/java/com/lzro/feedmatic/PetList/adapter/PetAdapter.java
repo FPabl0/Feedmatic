@@ -51,7 +51,6 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
             PetModel element = dataset.get(position);
             String petName = element.getName();
             String lastFeed = element.getLastFeed();
-            String nextFeed = element.getNextFeed();
             boolean petOnline = element.isOnline();
 
             holder.tvPetModel_Name.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
@@ -59,6 +58,8 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
 
             holder.tvPetModel_Name.setText(petName);
             holder.tvPetModel_Name.setTextColor(Color.DKGRAY);
+
+            holder.tvPetModel_LastFeed.setText("últ. vez " + lastFeed);
 
             if (petOnline == true) {
                 holder.tvPetModel_Online.setTextColor(Color.parseColor("#448AFF"));
